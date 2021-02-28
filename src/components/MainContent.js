@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
 
 export default class MainContent extends Component {
+  constructor() {
+    super()
+    this.state = {
+      plantImage: '',
+    }
+  }
+
   render() {
     return (
       <div
@@ -11,7 +18,15 @@ export default class MainContent extends Component {
           textAlign: 'center',
         }}
       >
-        <h1>Plant image will go here</h1>
+        <img
+          src={this.state.plantImage}
+          alt={this.state.plantImage}
+          style={{
+            width: '500px',
+            height: '500px',
+            backgroundColor: '#696969',
+          }}
+        />
         <p>Plant name: way cool plant</p>
         <p>Scientific name: sciency sounding stuff</p>
       </div>
